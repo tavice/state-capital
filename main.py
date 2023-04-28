@@ -90,7 +90,9 @@ def play_game():
     print("")
 
     for state in states:
-        print(f"Name the capital of {state['name']}: ")
+        hint = state['capital'][:3] # Get the first 3 letters of the capital as a hint
+     
+        print(f"Name the capital of {state['name']} (hint, it starts with {hint}...): ")
         answer = input(">> ")
         if answer.lower() == state['capital'].lower():
             print("Correct!")
